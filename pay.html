@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>:: 카카오톡 공유하기 ::</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type="text/javascript">
+    function shareKakaotalk() {
+        Kakao.init("6e03e3be76794d7df42a7f16180ee9ea");      // 사용할 앱의 JavaScript 키를 설정
+        Kakao.Link.sendDefault({
+              objectType:"feed"
+            , content : {
+                  title:"2,000,000원을 받으세요"   // 콘텐츠의 타이틀
+                , imageUrl:"paylion.jpg"   // 썸네일 이미지
+                , link : {
+                      mobileWebUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+                    , webUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+                }
+            }
+            , buttons : [
+                {
+                      title:"받기"    // 버튼 제목
+                    , link : {
+                        mobileWebUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763"   // 모바일 카카오톡에서 사용하는 웹 링크 URL
+                      , webUrl:"https://cdn.shopify.com/s/files/1/2046/8557/products/Yellow-Octopus-Money-Dispensing-Gun-5.jpg?v=1563151763" // PC버전 카카오톡에서 사용하는 웹 링크 URL
+                    }
+                }
+            ]
+        });
+    }
+</script>
+</head>
+<body>
+    <h1>카카오톡 공유하기</h1>
+    <input type="button" onClick="shareKakaotalk();" value="KAKOA Talk으로 공유하기"/>
+</body>
+</html>
